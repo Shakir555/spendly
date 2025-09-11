@@ -1,4 +1,7 @@
-import "./style.css"; // Load Tailwind
+// Libraries
+// Tailwind CSS
+import "./style.css";
+import AddExpenseForm from "./components/addExpense.js";
 
 document.querySelector("#app").innerHTML = `
   <div class="p-6 min-h-screen">
@@ -35,7 +38,10 @@ document.querySelector("#app").innerHTML = `
         <h4 class="text-lg font-bold">Remaining Budget</h4>
         <p class="text-xl font-thin">$$$$</p> 
       </div>
-    </div>       
+    </div>
+
+    <!-- Add Expense Form -->
+    ${AddExpenseForm()}       
   </div>  
 `;
 
