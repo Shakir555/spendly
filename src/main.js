@@ -2,6 +2,7 @@
 // Tailwind CSS
 import "./style.css";
 import AddExpenseForm from "./components/addExpense.js";
+import expenseManagerForm from "./components/expenseManager.js";
 
 document.querySelector("#app").innerHTML = `
   <div class="p-6 min-h-screen">
@@ -40,8 +41,13 @@ document.querySelector("#app").innerHTML = `
       </div>
     </div>
 
-    <!-- Add Expense Form -->
-    ${AddExpenseForm()}       
+    <!-- Add Expense + Expense Manager Side by Side -->
+    <div class="flex gap-6 items-start">
+      <!-- Add Expense Form -->
+        ${AddExpenseForm()}
+      <!-- Expense Manager Form -->
+        ${expenseManagerForm()}
+    </div>
   </div>  
 `;
 
