@@ -3,6 +3,7 @@
 import "./style.css";
 import AddExpenseForm from "./components/addExpense.js";
 import expenseManagerForm from "./components/expenseManager.js";
+import { setupAddExpenseEvent } from "./events/addExpenseEvent.js";
 
 document.querySelector("#app").innerHTML = `
   <div class="p-6 min-h-screen">
@@ -50,5 +51,8 @@ document.querySelector("#app").innerHTML = `
     </div>
   </div>  
 `;
+
+// Add Event after rendering
+setupAddExpenseEvent();
 
 
